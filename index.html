@@ -77,7 +77,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mr-2 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    Upcoming HK Competitors (Next 14 Days)
+                    Upcoming HK Competitors (Next 28 Days)
                 </h2>
                 <p class="text-xs text-gray-500 mb-4">Competitors from Hong Kong registered for an event in which they are Nationally Ranked 10 or better.</p>
                 <div id="upcoming-results">
@@ -93,7 +93,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.042 12.036 12.036 0 00-1.63 7.558 12.036 12.036 0 001.63 7.558 11.955 11.955 0 018.618 3.042 12.036 12.036 0 001.63-7.558 12.036 12.036 0 00-1.63-7.558z" />
                     </svg>
-                    Recent Top PBs Achieved (Last 14 Days)
+                    Recent Top PBs Achieved (Last 28 Days)
                 </h2>
                 <p class="text-xs text-gray-500 mb-4">Competitors who achieved a new personal best that is Hong Kong National Rank 10 or World Rank 5 or better.</p>
                 <div id="recent-results">
@@ -565,7 +565,7 @@
             // Calculate FUTURE range (Upcoming Competitions)
             const futureStartDt = new Date(today);
             const futureEndDt = new Date(today);
-            futureEndDt.setDate(futureEndDt.getDate() + 14); // Next 14 days
+            futureEndDt.setDate(futureEndDt.getDate() + 28); // Next 14 days
             
             futureStartDate = formatDate(futureStartDt);
             futureEndDate = formatDate(futureEndDt);
@@ -574,7 +574,7 @@
             const pastEndDt = new Date(today);
             pastEndDt.setDate(pastEndDt.getDate() - 1); // Yesterday
             const pastStartDt = new Date(pastEndDt);
-            pastStartDt.setDate(pastStartDt.getDate() - 13); // 7 days ending yesterday
+            pastStartDt.setDate(pastStartDt.getDate() - 27); // 7 days ending yesterday
             
             pastStartDate = formatDate(pastStartDt);
             pastEndDate = formatDate(pastEndDt);
